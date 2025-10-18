@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | BML 3D Prints</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="icon" type="image/png" href="/BML.png">
+  <style>
+    .resources-hero {
+      background: linear-gradient(120deg, #e0e7ef, #f0f4f8);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .resources-hero h1 {
+      font-family: 'unna', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    .resources-hero p {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-bottom: 2rem;
+    }
+
+    .resources-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      align-items: flex-start; /* Align cards left */
+    }
+
+    .resource-card {
+      width: 100%;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--dark);
+    }
+
+    .resource-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .resource-card h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    .resource-card p {
+      margin: 0.3rem 0 0 0;
+      font-size: 1rem;
+      color: var(--secondary);
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-button {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .card-button:hover {
+      background: var(--dark);
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<nav class="top-navbar">
+  <div class="top-left">
+    <a href="index.html" class="brand">BML 3D Prints</a>
+  </div>
+  <div class="top-right dropdown">
+    <button class="dropbtn">Translate ▾</button>
+    <div class="dropdown-content">
+      <a href="homech.html">Chinese Simplified - 简体中文</a>
+      <a href="homesp.html">Spanish - Español</a>
+      <a href="homefr.html">French - Français</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="resources-hero">
+  <h1>Resources</h1>
+  <p>Explore tutorials, competitions, inspiration, and more to boost your 3D printing skills!</p>
+</section>
+
+
+<!-- BOTTOM NAVBAR -->
+<nav class="bottom-navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="bmlwiki.html">Wiki</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="help.html">Help</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- VERTICAL RESOURCE CARDS WITH BUTTONS -->
+<div class="resources-container">
+  <div class="resource-card">
+    <div class="card-content">
+      <h3>Competitions</h3>
+      <p>Discover local and international 3D printing contests.</p>
+    </div>
+    <a class="card-button" href="competitions.html">→</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="card-content">
+      <h3>Inspiration</h3>
+      <p>Get ideas from creative 3D prints and projects.</p>
+    </div>
+    <a class="card-button" href="inspiration.html">→</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="card-content">
+      <h3>STEM Articles</h3>
+      <p>Learn science, technology, engineering, and math concepts.</p>
+    </div>
+    <a class="card-button" href="stemArticles.html">→</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="card-content">
+      <h3>Starter Files</h3>
+      <p>Download free STL models and templates ready to print.</p>
+    </div>
+    <a class="card-button" href="starterFiles.html">→</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="card-content">
+      <h3>Learning Activities</h3>
+      <p>Fun exercises and challenges to strengthen skills in 3D printing and other branches of technology.</p>
+    </div>
+    <a class="card-button" href="learningActivities.html">→</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="card-content">
+      <h3>Games</h3>
+      <p>Interactive games to make learning 3D Designing and Printing fun.</p>
+    </div>
+    <a class="card-button" href="games.html">→</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 BML 3D Prints. All rights reserved. | <a href="contact.html">Contact</a></p>
+</footer>
+
+</body>
+</html>

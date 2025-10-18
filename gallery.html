@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="/BML.png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery | BML 3D Prints</title>
+<link rel="stylesheet" href="about.css" />
+<style>
+/* Gallery Container */
+.gallery-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Individual Design Box */
+.design-box {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.design-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.design-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Name & Description */
+.design-info {
+  padding: 1rem;
+}
+
+.design-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.design-info p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+/* Submit Button */
+.submit-design {
+  display: block;
+  max-width: 250px;
+  margin: 3rem auto 1rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.submit-design:hover {
+  background: var(--dark);
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<nav class="top-navbar">
+  <div class="top-left">
+    <a href="index.html" class="brand">BML 3D Prints</a>
+  </div>
+  <div class="top-right dropdown">
+    <button class="dropbtn">Translate ▾</button>
+    <div class="dropdown-content">
+      <a href="homech.html">Chinese Simplified - 简体中文</a>
+      <a href="homesp.html">Spanish - Español</a>
+      <a href="homefr.html">French - Français</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Gallery</h1>
+  <p>Explore featured designs created by our community.</p>
+</section>
+
+
+<!-- BOTTOM NAVBAR -->
+<nav class="bottom-navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="bmlwiki.html">Wiki</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="help.html">Help</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- GALLERY -->
+<section class="gallery-container">
+  <div class="design-box">
+    <img src="Cactus Image.png" alt="Cactus" onclick="window.open('https://www.tinkercad.com/things/18ckuNK47Sg-cactus')">
+    <div class="design-info">
+      <h3>Cactus</h3>
+      <p>A small decorative 3D cactus perfect for your desk or shelf.</p>
+      <p>Designed by: Songhao (Maxi) Zhang [BML 3D Prints]</p>
+    </div>
+  </div>
+
+  <div class="design-box">
+    <img src="DNA Image.png" alt="Deoxyribonucleic Acid" onclick="window.open('https://www.tinkercad.com/things/6qbfbOkxlLc-copy-of-dna')">
+    <div class="design-info">
+      <h3>Deoxyribonucleic Acid</h3>
+      <p>A simple designed DNA model ready to be placed anywhere.</p>
+      <p>Designed by: Songhao (Maxi) Zhang [BML 3D Prints]</p>
+    </div>
+  </div>
+
+
+
+  <!-- Add more boxes as needed -->
+</section>
+
+<a href="contact.html" class="submit-design" target="_blank">Submit Your Design</a>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 BML 3D Prints. All rights reserved. | <a href="contact.html">Contact</a></p>
+</footer>
+
+</body>
+</html>

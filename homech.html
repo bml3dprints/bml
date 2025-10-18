@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="/BML.png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Submit Your Design | BML 3D Prints</title>
+<link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<nav class="top-navbar">
+  <div class="top-left">
+    <a href="homech.html" class="brand">BML 3D 打印</a>
+  </div>
+  <div class="top-right dropdown">
+    <button class="dropbtn">翻译 ▾</button>
+    <div class="dropdown-content">
+      <a href="index.html">英语 - English</a>
+      <a href="homesp.html">西班牙语 - Español</a>
+      <a href="homefr.html">法语 - Français</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 欢迎 -->
+<section class="hero">
+  <h1>欢迎来到 BML 3D 打印</h1>
+  <p>为您的创意需求提供专业的 3D 打印服务。</p>
+  <div class="hero-buttons">
+    <a href="shop.html" class="btn">立即购买</a>
+    <a href="about.html" class="btn">了解更多</a>
+  </div>
+</section>
+
+<!-- 底部导航栏 -->
+<nav class="bottom-navbar">
+  <ul>
+    <li><a href="homech.html" class="active">首页</a></li>
+    <li><a href="aboutch.html">关于</a></li>
+    <li><a href="gallery.html">图库</a></li>
+    <li><a href="shop.html">商店</a></li>
+    <li><a href="bmlwiki.html">Wiki</a></li>
+    <li><a href="courses.html">课程</a></li>
+    <li><a href="resources.html">资源</a></li>
+    <li><a href="news.html">新闻</a></li>
+    <li><a href="help.html">帮助</a></li>
+    <li><a href="contact.html">联系</a></li>
+  </ul>
+</nav>
+
+<!-- 横向时间轴 -->
+<section class="timeline-container">
+  <button class="scroll-btn left-btn">&#8249;</button>
+  <div class="features horizontal-timeline">
+    <div class="feature"><h2>定制设计</h2><p>使用个性化 3D 打印解决方案让您的创意成真。</p></div>
+    <div class="feature"><h2>盲盒</h2><p>惊喜 3D 打印收藏品，激发创造力。</p></div>
+    <div class="feature"><h2>资源</h2><p>学习 3D 打印的技巧、方法和技术。</p></div>
+    <div class="feature"><h2>图库</h2><p>探索精选打印作品及用户创作。</p></div>
+    <div class="feature"><h2>支持</h2><p>获取打印或设计问题的帮助。</p></div>
+    <div class="feature"><h2>新闻</h2><p>随时了解新功能、产品和活动。</p></div>
+  </div>
+  <button class="scroll-btn right-btn">&#8250;</button>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <p>&copy; 2025 BML 3D 打印。版权所有 | <a href="contact.html">联系我们</a></p>
+</footer>
+
+<script>
+const timeline = document.querySelector('.features.horizontal-timeline');
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+
+const scrollAmount = timeline.querySelector('.feature').offsetWidth + 32;
+
+leftBtn.addEventListener('click', () => {
+  timeline.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  timeline.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+// 鼠标拖动滚动
+let isDown = false;
+let startX;
+let scrollLeft;
+
+timeline.addEventListener('mousedown', e => {
+  isDown = true;
+  timeline.classList.add('active');
+  startX = e.pageX - timeline.offsetLeft;
+  scrollLeft = timeline.scrollLeft;
+});
+timeline.addEventListener('mouseleave', () => { isDown = false; timeline.classList.remove('active'); });
+timeline.addEventListener('mouseup', () => { isDown = false; timeline.classList.remove('active'); });
+timeline.addEventListener('mousemove', e => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - timeline.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  timeline.scrollLeft = scrollLeft - walk;
+});
+</script>
+
+</body>
+</html>

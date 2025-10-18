@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/BML.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | BML 3D Prints</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<nav class="top-navbar">
+  <div class="top-left">
+    <a href="index.html" class="brand">BML 3D Prints</a>
+  </div>
+  <div class="top-right dropdown">
+    <button class="dropbtn">Translate ▾</button>
+    <div class="dropdown-content">
+      <a href="aboutch.html">Chinese Simplified - 简体中文</a>
+      <a href="aboutsp.html">Spanish - Español</a>
+      <a href="aboutfr.html">French - Français</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO / ABOUT HEADING -->
+<section class="hero">
+  
+  <h1>About BML 3D Prints</h1>
+  <p>Learn more about our journey, our mission, and how we use creativity and technology to shape the future of 3D printing.</p>
+</section>
+
+<!-- BOTTOM NAVBAR -->
+<nav class="bottom-navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="bmlwiki.html">Wiki</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="help.html">Help</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HORIZONTAL TIMELINE -->
+<section class="timeline-container">
+  <button class="scroll-btn left-btn">&#8249;</button>
+  <div class="features horizontal-timeline">
+
+    <div class="feature">
+      <h2>Founded in 2025</h2>
+      <p>BML 3D Prints began as a passion project by Brenda Shen, Maxi Zhang, and Lydia Kurniawan during 7th grade. Inspired by our Technology Education teacher, Mrs. Amy Schroeder, we set out to explore the creative possibilities of 3D printing.</p>
+      <a href="staff.html" class="btn-secondary">Contact our Staff →</a>    
+    </div>
+
+    <div class="feature">
+      <h2>Mission</h2>
+      <p>Our mission is to spark creativity and innovation through 3D printing. We provide resources and inspiration for students, hobbyists, and makers of all ages—helping ideas become reality, one layer at a time.</p>
+      <a href="support.html" class="btn-secondary">Need Help? →</a>
+    </div>
+
+    <div class="feature">
+      <h2>Custom Solutions</h2>
+      <p>We specialize in personalized 3D printing and design services. Share your ideas with us, and we’ll bring them to life—designed, printed, and shipped directly to you.</p>
+      <a href="shopCD.html" class="btn-secondary">Customize Designs →</a>
+    </div>
+
+    <div class="feature">
+      <h2>Blind Boxes</h2>
+      <p>Our Blind Boxes are collectible surprises designed to inspire curiosity and creativity. Each box includes unique 3D-printed creations, available in different themed packs.</p>
+      <a href="shopBB.html" class="btn-secondary">Blind Boxes →</a>
+    </div>
+
+    <div class="feature">
+      <h2>Competitions</h2>
+      <p>BML hosts creative competitions that challenge designers to push the limits of 3D modeling. With months to develop and refine entries, participants can showcase both skill and imagination.</p>
+      <a href="competitions.html" class="btn-secondary">Competitions →</a>
+    </div>
+
+    <div class="feature">
+      <h2>Gallery</h2>
+      <p>The gallery highlights outstanding designs from our team and community. Want your work featured? Submit your creations through the Contact page and share your talent with the world.</p>
+      <a href="gallery.html" class="btn-secondary">Gallery →</a>
+    </div>
+
+    <div class="feature">
+      <h2>Courses</h2>
+      <p>Learn 3D design, 3D printing, coding, and more through our courses. Access lessons directly on our website or explore tutorials on our official YouTube channel.</p>
+      <a href="https://www.youtube.com/@bml3dprints" class="btn-secondary">YouTube →</a>
+    </div>
+
+    <div class="feature">
+      <h2>Support</h2>
+      <p>We value our community and are here to help with your 3D design, printing, and technology questions. Get the guidance you need through our dedicated support page.</p>
+      <a href="support.html" class="btn-secondary">Support →</a>
+    </div>
+
+  </div>
+  <button class="scroll-btn right-btn">&#8250;</button>
+</section>
+
+<!-- INFO SECTIONS -->
+<section class="info-section">
+  <h2>Our Vision</h2>
+  <p>To make 3D printing accessible, fun, and creative for everyone—from hobbyists and students to professionals and innovators.</p>
+</section>
+
+<section class="info-section">
+  <h2>Our Team</h2>
+  <p>We are a group of passionate designers, makers, and students dedicated to pushing the boundaries of what’s possible with 3D printing.</p>
+</section>
+
+<section class="info-section">
+  <h2>Our Values</h2>
+  <p>Creativity, quality, collaboration, unity, and community are the values we live by. These principles guide everything we create and share.</p>
+</section>
+
+<section class="info-section">
+  <h2>Get Involved</h2>
+  <p>Join workshops, participate in competitions, explore our courses, or share your ideas with us. Together, we can build a future powered by creativity and innovation.</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 BML 3D Prints. All rights reserved. | <a href="contact.html">Contact</a></p>
+</footer>
+
+<!-- TIMELINE SCROLL SCRIPT -->
+<script>
+const timeline = document.querySelector('.features.horizontal-timeline');
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+
+const scrollAmount = timeline.querySelector('.feature').offsetWidth + 32;
+
+leftBtn.addEventListener('click', () => {
+  timeline.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  timeline.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+timeline.addEventListener('mousedown', e => {
+  isDown = true;
+  startX = e.pageX - timeline.offsetLeft;
+  scrollLeft = timeline.scrollLeft;
+});
+timeline.addEventListener('mouseleave', () => { isDown = false; });
+timeline.addEventListener('mouseup', () => { isDown = false; });
+timeline.addEventListener('mousemove', e => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - timeline.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  timeline.scrollLeft = scrollLeft - walk;
+});
+</script>
+
+</body>
+</html>

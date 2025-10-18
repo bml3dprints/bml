@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="/BML.png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Submit Your Design | BML 3D Prints</title>
+<link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<nav class="top-navbar">
+  <div class="top-left">
+    <a href="index.html" class="brand">BML 3D Prints</a>
+  </div>
+  <div class="top-right dropdown">
+    <button class="dropbtn">Translate ▾</button>
+    <div class="dropdown-content">
+      <a href="homech.html">Chinese Simplified - 简体中文</a>
+      <a href="homesp.html">Spanish - Español</a>
+      <a href="homefr.html">French - Français</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Welcome to BML 3D Prints</h1>
+  <p>Professional 3D printing services for all your creative needs.</p>
+  <div class="hero-buttons">
+    <a href="shop.html" class="btn">Shop Now</a>
+    <a href="about.html" class="btn">Learn More</a>
+  </div>
+</section>
+
+<!-- BOTTOM NAVBAR -->
+<nav class="bottom-navbar">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="bmlwiki.html">Wiki</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="help.html">Help</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HORIZONTAL TIMELINE -->
+<section class="timeline-container">
+  <button class="scroll-btn left-btn">&#8249;</button>
+  <div class="features horizontal-timeline">
+    <div class="feature"><h2>Custom Designs</h2><p>Bring your ideas to life with personalized 3D printing solutions.</p></div>
+    <div class="feature"><h2>Blind Boxes</h2><p>Surprise 3D-printed collectibles to spark creativity.</p></div>
+    <div class="feature"><h2>Resources</h2><p>Tips, tricks, and techniques for 3D printing.</p></div>
+    <div class="feature"><h2>Community</h2><p>Join our community to share ideas.</p></div>
+    <div class="feature"><h2>Workshops</h2><p>Attend online workshops for 3D printing skills.</p></div>
+    <div class="feature"><h2>Competitions</h2><p>Compete Against other 3D Designers in a long term design competition</p></div>
+    <div class="feature"><h2>Custom Orders</h2><p>Request personalized designs for projects.</p></div>
+    <div class="feature"><h2>Gallery</h2><p>Explore featured prints and user creations.</p></div>
+    <div class="feature"><h2>Resources</h2><p>Lots of activites to engage with relating to STEM and 3D Printing.</p></div>
+    <div class="feature"><h2>Support</h2><p>Get help with printing or designing questions.</p></div>
+    <div class="feature"><h2>News</h2><p>Stay updated with new information, products, and events in BML and the 3D Printing Community.</p></div>
+  </div>
+  <button class="scroll-btn right-btn">&#8250;</button>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 BML 3D Prints. All rights reserved. | <a href="contact.html">Contact</a></p>
+</footer>
+
+<script>
+const timeline = document.querySelector('.features.horizontal-timeline');
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+
+const scrollAmount = timeline.querySelector('.feature').offsetWidth + 32; // width + gap
+
+leftBtn.addEventListener('click', () => {
+  timeline.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  timeline.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+// Optional: Drag to scroll
+let isDown = false;
+let startX;
+let scrollLeft;
+
+timeline.addEventListener('mousedown', e => {
+  isDown = true;
+  timeline.classList.add('active');
+  startX = e.pageX - timeline.offsetLeft;
+  scrollLeft = timeline.scrollLeft;
+});
+timeline.addEventListener('mouseleave', () => { isDown = false; timeline.classList.remove('active'); });
+timeline.addEventListener('mouseup', () => { isDown = false; timeline.classList.remove('active'); });
+timeline.addEventListener('mousemove', e => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - timeline.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  timeline.scrollLeft = scrollLeft - walk;
+});
+</script>
+
+</body>
+</html>
